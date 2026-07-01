@@ -4,7 +4,7 @@ const Pages = ({ totalPages, pageChange, currPage }) => {
   console.log(currPage);
 
   return (
-    <div className=" relative  bg-white my-4 rounded flex justify-center">
+   <div className=" relative  bg-white my-4 rounded flex justify-center">
       <div className="flex relative p-2 justify-evenly gap-2 items-center">
         {Array.from({ length: totalPages }, (_, index) => (
           <div

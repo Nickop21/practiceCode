@@ -21,9 +21,15 @@ const Pagination = () => {
 
   return (
     <div className="text-white">
-      <Pages totalPages={totalNumberOfPages} pageChange={pageChange} currPage={currentPage} />
+      {totalNumberOfPages > 0 && (
+        <Pages
+          totalPages={totalNumberOfPages}
+          pageChange={pageChange}
+          currPage={currentPage}
+        />
+      )}
       <div className=" flex flex-row flex-wrap justify-between ">
-        {resultData?.recipes?.slice(startIndex,EndIndex)?.map((data) => (
+        {resultData?.recipes?.slice(startIndex, EndIndex)?.map((data) => (
           <div key={data.name} className="w-[48%] md:w-[30%] lg:w-[23%] ">
             <Card data={data} />
           </div>

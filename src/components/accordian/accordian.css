@@ -1,0 +1,34 @@
+.accodian-parent {
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.accodian {
+  /* padding: 20px; */
+  transition: all 4s ease-in-out;
+}
+.accodian-child {
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+  padding: 20px;
+  /* background-color: gainsboro; */
+  cursor: pointer;
+}
+.accodian-child:hover {
+  background-color: antiquewhite;
+}
+.description {
+  /* visibility: hidden; */
+  display: none;
+  /* height: 0; */
+  opacity: 0;
+  padding: 20px;
+  transition: all 0.2s ease-in-out;
+}
+.description.visible {
+   /* min-height:10px ; */
+  /* visibility: visible; */
+  display: block;
+  opacity: 1;
+}

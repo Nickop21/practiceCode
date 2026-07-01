@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const useApi = (searchText) => {
+const useApi = (searchText = "", type = "default") => {
   const [resultData, setResultData] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -8,11 +8,15 @@ const useApi = (searchText) => {
 
   const fetchData = async () => {
     setLoading(true);
-    if (!searchText.trim()) {
+    const url =
+      type !== "search"
+        ? "https://dummyjson.com/recipes"
+        : "https://dummyjson.com/recipes/search?q" + searchText;
+    if (!searchText.trim() && type == "search") {
       setResultData(null);
       return null;
     }
-    if (cachData[searchText]) {
+    if (cachData[searchText] && type == "search") {
       console.log("caching", searchText);
 
       setResultData(cachData[searchText]);
@@ -20,9 +24,7 @@ const useApi = (searchText) => {
     }
 
     try {
-      const response = await fetch(
-        "https://dummyjson.com/recipes/search?q=" + searchText,
-      );
+      const response = await fetch(url);
       const json = await response.json();
       setResultData(json);
       setCacheData((prev) => ({

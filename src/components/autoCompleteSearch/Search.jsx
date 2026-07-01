@@ -5,7 +5,7 @@ import "./search.css";
 const Search = () => {
   const [searchText, setSearchText] = useState("");
   const [debouncedValue, setDebouncedValue] = useState("");
-  const { resultData, error, loading } = useApi(debouncedValue);
+  const { resultData, error, loading } = useApi(debouncedValue,"search");
 
   function onChangeData(e) {
     setSearchText(e.target.value);

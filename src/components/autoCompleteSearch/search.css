@@ -19,6 +19,7 @@
   border-top-right-radius: 0;
   background-color: white;
   overflow-y: scroll;
+  overflow-x:hidden ;
   scrollbar-color: rgb(243, 159, 159) #f9fafb01; 
 }
 /* .search-result::-webkit-scrollbar {
