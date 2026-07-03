@@ -1,0 +1,19 @@
+.progress-container {
+}
+.progress-bar {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  background: aliceblue;
+  border-radius: 30px;
+  overflow: hidden;
+}
+.progress-inner {
+  position: absolute;
+  text-align: end;
+  color: yellow;
+  /* width: 100%; */
+  background: green;
+  transition: all 1s ease-in-out;
+  inset: 0;
+}

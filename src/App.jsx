@@ -4,12 +4,17 @@ import TabSwitcher from "./components/TabSwitcher";
 import Pagination from "./components/pagination/Pagination";
 import Search from "./components/autoCompleteSearch/Search";
 import Accordian from "./components/accordian/Accordian";
+import ProgressBar from "./components/progressbar/ProgressBar";
 
 function App() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [componentActiveIndex, setComponentActiveIndex] = useState(0);
 
   const Component = [
+      {
+      name: "ProgressBar",
+      component: <ProgressBar/>,
+    },
      {
       name: "Pagination",
       component: <Pagination/>,
