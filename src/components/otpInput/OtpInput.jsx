@@ -17,19 +17,37 @@ const OtpInput = () => {
 
     val.trim() && Inputref.current[index + 1]?.focus();
   }
+  
+  function moveCursorToEnd(input) {
+  input?.focus();
+  input?.setSelectionRange(input.value.length, input.value.length);
+}
 
-  function handleKeyDown(e, index) {
-    const key = e.code;
-    console.log(e.target.value.trim() == "");
+ function handleKeyDown(e, index) {
+    const val=e.target?.value
+    
+  switch (e.key) {
+    case "Backspace":
+      if (!val) {
+        Inputref.current[index - 1]?.focus();
+      }
+      break;
 
-    if (key == "Backspace" && !e.target.value) {
-      Inputref.current[index - 1]?.focus();
-    }
-    if (key == "ArrowRight" && e.target.value.trim() !== "")
-      Inputref.current[index + 1]?.focus();
-    if (key == "ArrowLeft" && e.target.value.trim() !== "")
-      Inputref.current[index - 1]?.focus();
+    case "ArrowLeft":
+      e.preventDefault();
+      if (Inputref.current[index - 1]  ) {
+        moveCursorToEnd(Inputref.current[index - 1]);
+      }
+      break;
+
+    case "ArrowRight":
+      e.preventDefault();
+      if (Inputref.current[index + 1]) {
+        moveCursorToEnd(Inputref.current[index + 1]);
+      }
+      break;
   }
+}
   useEffect(() => {
     Inputref.current[0]?.focus();
   }, []);
