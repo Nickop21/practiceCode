@@ -5,12 +5,17 @@ import Pagination from "./components/pagination/Pagination";
 import Search from "./components/autoCompleteSearch/Search";
 import Accordian from "./components/accordian/Accordian";
 import ProgressBar from "./components/progressbar/ProgressBar";
+import OtpInput from "./components/otpInput/OtpInput";
 
 function App() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [componentActiveIndex, setComponentActiveIndex] = useState(0);
 
   const Component = [
+     {
+      name: "OtpInput",
+      component: <OtpInput/>,
+    },
       {
       name: "ProgressBar",
       component: <ProgressBar/>,
