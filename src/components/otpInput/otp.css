@@ -1,0 +1,35 @@
+
+.heading{
+color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 44px;
+  text-align: center;
+  text-decoration: underline;
+}
+.otp-parent{
+     display: flex;
+    justify-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.otp-input{
+    background:white;
+    padding: 15px;
+    width: 100px;
+    margin: 5px;
+    border-radius: 15px;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 700;
+    /* pointer-events: none; */
+}
+.otp-input:focus{
+    /* background: rgb(233, 166, 166); */
+    outline: none;
+    border: 2px solid red;
+}
+.filled{
+    background: rgb(176, 230, 176);
+
+}
