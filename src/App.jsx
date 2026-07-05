@@ -6,12 +6,17 @@ import Search from "./components/autoCompleteSearch/Search";
 import Accordian from "./components/accordian/Accordian";
 import ProgressBar from "./components/progressbar/ProgressBar";
 import OtpInput from "./components/otpInput/OtpInput";
+import Todo from "./components/todo/Todo";
 
 function App() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [componentActiveIndex, setComponentActiveIndex] = useState(0);
 
   const Component = [
+      {
+      name: "TODO",
+      component: <Todo/>,
+    },
      {
       name: "OtpInput",
       component: <OtpInput/>,
