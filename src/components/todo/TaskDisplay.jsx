@@ -1,15 +1,23 @@
 import React from "react";
 
-const TaskDisplay = () => {
+const TaskDisplay = ({ todo, index, checked, deleteTodo }) => {
   return (
-    <div className="color task-display-container">
-      <div className="flex  gap-4 items-center">
-        <input type="checkbox" className="input-check" />
-        <p className="task-content color">
-          Loditate pariatur, consequuntur libero suscipit?
-        </p>
+    <div
+      className={`"color task-display-container mt-4 ${todo.checked && "bg-green-500"}`}
+    >
+      <div className="flex gap-4  items-center">
+        <div className="flex items-center">
+          <input
+            type="checkbox"
+            className="input-check custom-checkbox"
+            onChange={() => checked(index)}
+          />
+        </div>
+        <p className={`task-content color `}>{todo?.task}</p>
       </div>
-      <button className="delete-btn">x</button>
+        <button className="delete-btn color ml-4 flex items-start" onClick={() => deleteTodo(index)}>
+          x
+        </button>
     </div>
   );
 };
