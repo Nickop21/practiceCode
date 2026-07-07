@@ -17,8 +17,6 @@ const useApi = (searchText = "", type = "default") => {
       return null;
     }
     if (cachData[searchText] && type == "search") {
-      console.log("caching", searchText);
-
       setResultData(cachData[searchText]);
       return;
     }
@@ -36,8 +34,7 @@ const useApi = (searchText = "", type = "default") => {
     } finally {
       setLoading(false);
     }
-    console.log(searchText);
-    console.log(resultData);
+
   };
 
   useEffect(() => {

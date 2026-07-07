@@ -1,7 +1,6 @@
 import React from "react";
 
 const Pages = ({ totalPages, pageChange, currPage }) => {
-  console.log(currPage);
 
   return (
    <div className=" relative  bg-white my-4 rounded flex justify-center">

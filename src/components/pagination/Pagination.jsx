@@ -12,11 +12,9 @@ const Pagination = () => {
   const startIndex = currentPage * Page_Size;
   const EndIndex = startIndex + Page_Size;
 
-  console.log(totalProduct, " ", totalNumberOfPages);
 
   function pageChange(pagenum) {
     setCurrentPage(pagenum);
-    console.log(pagenum);
   }
 
   return (

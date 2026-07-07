@@ -39,7 +39,6 @@ const TabSwitcher = ({ activeIndex, activeIndexChange }) => {
   ];
 
   function check(e) {
-    console.log(e.target);
 
     const { name, checked, type, value } = e.target;
     const dataform = {
@@ -58,7 +57,6 @@ const TabSwitcher = ({ activeIndex, activeIndexChange }) => {
     //   ]));
     // }
 
-    console.log(formdata);
   }
 
 
