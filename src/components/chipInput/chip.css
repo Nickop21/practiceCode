@@ -1,0 +1,63 @@
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  border-radius: 15px;
+  padding: 12px;
+  border: 2px solid rgba(157, 195, 221, 0.962);
+}
+.chip-block {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chips {
+  background: rgb(7, 98, 162);
+  padding: 10px;
+  border-radius: 15px;
+  font-weight: 600;
+  color: aliceblue;
+  /* margin: 5px; */
+}
+.close {
+  margin-left: 10px;
+  cursor: pointer;;
+}
+
+.btn-action {
+  color: gray;
+  margin-right: 18px;
+  font-weight: bolder;
+  /* font-size: 44px; */
+  /* padding: 12px; */
+}
+
+/* .chip-option. */
+
+.chip-option-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  background: white;
+  margin-top: 10px;
+  border-radius: 15px;
+  padding: 12px;
+  border: 2px solid rgba(157, 195, 221, 0.962);
+}
+.chip-option-parent{
+
+  /* background: rgba(116, 165, 233, 0.373); */
+  padding: 10px;
+  border-radius: 15px;
+  font-weight: bolder;
+  color: rgba(7, 97, 162, 0.87);
+  border: 1px solid rgba(7, 97, 162, 0.312);
+  cursor: pointer;
+}
+
+.img-logo{
+   width: 20px;
+   height: 20px; 
+}

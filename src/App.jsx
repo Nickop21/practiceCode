@@ -7,45 +7,54 @@ import Accordian from "./components/accordian/Accordian";
 import ProgressBar from "./components/progressbar/ProgressBar";
 import OtpInput from "./components/otpInput/OtpInput";
 import Todo from "./components/todo/Todo";
+import ChipInput from "./components/chipInput/ChipInput";
 
 function App() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [componentActiveIndex, setComponentActiveIndex] = useState(0);
 
   const Component = [
-      {
+    {
+      name: "Chip Input",
+      component: <ChipInput />,
+    },
+    {
       name: "TODO",
-      component: <Todo/>,
+      component: <Todo />,
     },
-     {
+    {
       name: "OtpInput",
-      component: <OtpInput/>,
+      component: <OtpInput />,
     },
-      {
+    {
       name: "ProgressBar",
-      component: <ProgressBar/>,
+      component: <ProgressBar />,
     },
-     {
+    {
       name: "Pagination",
-      component: <Pagination/>,
+      component: <Pagination />,
     },
     {
       name: "Search",
-      component: <Search/>,
+      component: <Search />,
     },
-   
+
     {
       name: "Accodian",
-      component: <Accordian/>,
+      component: <Accordian />,
     },
-     {
+    {
       name: "TabSwitcher",
-      component: <TabSwitcher activeIndex={activeIndex} activeIndexChange={activeIndexChange}/>,
+      component: (
+        <TabSwitcher
+          activeIndex={activeIndex}
+          activeIndexChange={activeIndexChange}
+        />
+      ),
     },
   ];
   function activeIndexChange(index) {
     setActiveIndex(index);
-    console.log(index);
   }
 
   function componetChanger(index) {
@@ -53,26 +62,27 @@ function App() {
   }
 
   return (
-    <div className="bg-black w-full max-w-7xl mx-auto h-full">
-      <div className="flex justify-evenly items-center p-4 pt-14 border-b-2 border-b-amber-300">
-        {Component.map((d, index) => (
-          <>
-            <div
-              className={`text-white font-bold rounded-xl p-3  ${componentActiveIndex==index ? "bg-amber-400" :"bg-red-300"} transition-colors duration-300 ease-in-out`}
-              key={d.name}
-              onClick={() => componetChanger(index)}
-            >
-              {d.name}
-            </div>
-          </>
-        ))}
+    <div className="bg-black w-fit md:w-full max-w-7xl mx-auto h-full ">
+      <div className="pt-14 overflow-x-scroll scrollbar-none ">
+        <div className="flex gap-4 items-center border-b-amber-300 border-b-2  pb-2">
+          {Component.map((d, index) => (
+            <>
+              <div
+                className={`text-white font-bold rounded-xl p-3  ${componentActiveIndex == index ? "bg-amber-400" : "bg-red-300"} transition-colors duration-300 ease-in-out`}
+                key={d.name}
+                onClick={() => componetChanger(index)}
+              >
+                {d.name}
+              </div>
+            </>
+          ))}
+        </div>
       </div>
-      <div className=" p-40 pt-10">
+      <div className=" p-10 lg:p-40 pt-10 w-full ">
         {Component[componentActiveIndex].component}
       </div>
 
       {/* <TabSwitcher  /> */}
-    
     </div>
   );
 }
