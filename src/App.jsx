@@ -8,12 +8,17 @@ import ProgressBar from "./components/progressbar/ProgressBar";
 import OtpInput from "./components/otpInput/OtpInput";
 import Todo from "./components/todo/Todo";
 import ChipInput from "./components/chipInput/ChipInput";
+import FileExplorer from "./fileExplorer/FileExplorer";
 
 function App() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [componentActiveIndex, setComponentActiveIndex] = useState(0);
 
   const Component = [
+     {
+      name: "File Explorer",
+      component: <FileExplorer />,
+    },
     {
       name: "Chip Input",
       component: <ChipInput />,
