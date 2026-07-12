@@ -1,23 +1,28 @@
 [
   {
+    "id":1,
     "name": "public",
     "isFolder": true,
     "children": [
       {
-        "name": "public",
+        "id":2,
+        "name": "assets",
         "isFolder": false
       }
     ]
   },
   {
+    "id":3,
     "name": "src",
     "isFolder": true,
     "children": [
       {
+        "id":4,
         "name": "components",
         "isFolder": true,
         "children": [
           {
+            "id":5,
             "name": "file.jsx",
             "isFolder": false
           }
@@ -26,11 +31,32 @@
     ]
   },
   {
+    "id":6,
     "name": "App.js",
     "isFolder":false
     
   },
+   {
+    "id":7,
+    "name": "pagination",
+    "isFolder": true,
+    "children": [
+      {
+        "id":8,
+        "name": "page",
+        "isFolder": true,
+        "children": [
+          {
+            "id":9,
+            "name": "page.jsx",
+            "isFolder": false
+          }
+        ]
+      }
+    ]
+  },
   {
+    "id":10,
     "name":"data.json",
     "isFolder":false
   }

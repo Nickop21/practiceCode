@@ -1,0 +1,19 @@
+.explorer-container{
+    color: white;
+    position: relative;
+}
+   
+.container{
+    position: absolute;
+ border: 1px solid wheat;
+    width: 40%;
+    /* height: ; */
+    padding: 20px;
+  
+}
+
+.parent-list{
+    color: aliceblue;
+    padding: 5px 0px 5px 15px;
+    border-left:1px solid gray ;
+}
