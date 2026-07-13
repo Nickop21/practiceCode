@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const ExplorerList = ({ list }) => {
+const ExplorerList = ({ list,setFileData }) => {
     const [isExpandable,setIsExpandable]=useState(false)
      const toggleFolder = (id) => {
     setIsExpandable((prev) => ({
@@ -8,6 +8,39 @@ const ExplorerList = ({ list }) => {
       [id]: !prev[id],
     }));
   };
+
+function addNodeTOList(parentId){
+  const nameadd=prompt("Enter Your Name")
+
+  const updateTree=(list)=>{
+    return list.map((node)=>{
+      if(node.id==parentId){
+        return{
+          ...node,children:[
+            ...node.children,
+            {
+             id:"1233" ,name:nameadd,isFolder:true,children:[]
+            }
+          ]
+        }
+      }
+
+      if (node.children) {
+        return{
+          ...node,children:updateTree(node.children)
+        }
+        
+      }
+
+      return node
+
+
+    })
+  }
+  setFileData((prev)=>updateTree(prev))
+
+}
+
   return (
     <>
       {list?.map((data) => (
@@ -17,6 +50,8 @@ const ExplorerList = ({ list }) => {
 }
              <span className="mr-1">{data.isFolder? "📁" :"📃"}</span>
             <span>{data?.name}</span>
+             <span className="mr-2" onClick={()=>addNodeTOList(data.id)}>{data.isFolder && "  ➕" }</span>
+
           </div>
           {isExpandable[data.id] && data?.children && <ExplorerList list={data.children} />}
         </div>
