@@ -20,7 +20,7 @@ const ExplorerList = ({ list, setFileData }) => {
             children: [
               ...node.children,
               {
-                id: nameadd,
+                id: Date.now(),
                 name: nameadd,
                 isFolder: true,
                 children: [],
@@ -46,22 +46,22 @@ const ExplorerList = ({ list, setFileData }) => {
     <>
       {list?.map((data) => (
         <div
-          className={` parent-list ${!data.isFolder && "ml-6"}`}
+          className={` parent-list ${!data.isFolder && "ml-4"}`}
           key={data?.id}
         >
           <div>
             {data.isFolder && (
               <span
-                className="mr-1 cursor-pointer"
+                className={`mr-1 cursor-pointer inline-block  transition-transform duration-200 ${isExpandable[data.id] ? "rotate-90" : "rotate-0"}`}
                 onClick={() => toggleFolder(data.id)}
               >
-                {isExpandable[data.id] ? "➡️" : "⬇️"}
+                 ⮞ 
               </span>
             )}
             <span className="mr-1">{data.isFolder ? "📁" : "📃"}</span>
             <span>{data?.name}</span>
-            <span className="mr-2" onClick={() => addNodeTOList(data.id)}>
-              {data.isFolder && "  ➕"}
+            <span className="ml-2 cursor-pointer" onClick={() => addNodeTOList(data.id)}>
+              {data.isFolder && "➕"}
             </span>
           </div>
           {isExpandable[data.id] && data?.children && (
