@@ -23,13 +23,13 @@
 .stepper-box{
     height: 50px;
     width: 50px;
-    background: white;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
     color: black;
     z-index: 50;
+    background-color: aliceblue;
 }
 .button{
     background: white;
@@ -45,4 +45,12 @@
 }
 .next{
     background: rgb(190, 190, 252);
+}
+.green{
+    background-color: green;
+    color: white;
+}
+
+.color-transition{
+    transition: all 0.7s ease-in;
 }
