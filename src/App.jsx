@@ -9,12 +9,17 @@ import OtpInput from "./components/otpInput/OtpInput";
 import Todo from "./components/todo/Todo";
 import ChipInput from "./components/chipInput/ChipInput";
 import FileExplorer from "./fileExplorer/FileExplorer";
+import Stepper from "./components/stepper/Stepper";
 
 function App() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [componentActiveIndex, setComponentActiveIndex] = useState(0);
 
   const Component = [
+      {
+      name: "Stepper",
+      component: <Stepper />,
+    },
      {
       name: "File Explorer",
       component: <FileExplorer />,

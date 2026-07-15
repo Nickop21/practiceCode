@@ -1,0 +1,48 @@
+.stepper-container{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    color: aliceblue;
+}
+.steppers{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.connecting-line{
+    position: absolute;
+    background: white;
+    width: 2px;
+    height: 52px;
+    margin: 10px;
+    left: 15px;
+    bottom: 40px;
+
+}
+.stepper-box{
+    height: 50px;
+    width: 50px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: black;
+    z-index: 50;
+}
+.button{
+    background: white;
+    width: 100px;
+    padding: 10px;
+    margin: 40px 40px 0px 0px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+.back{
+    background: rgb(244, 212, 212);
+}
+.next{
+    background: rgb(190, 190, 252);
+}
