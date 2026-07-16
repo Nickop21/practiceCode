@@ -10,12 +10,17 @@ import Todo from "./components/todo/Todo";
 import ChipInput from "./components/chipInput/ChipInput";
 import FileExplorer from "./fileExplorer/FileExplorer";
 import Stepper from "./components/stepper/Stepper";
+import Rating from "./ratings/Rating";
 
 function App() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [componentActiveIndex, setComponentActiveIndex] = useState(0);
 
   const Component = [
+      {
+      name: "Ratings",
+      component: <Rating />,
+    },
       {
       name: "Stepper",
       component: <Stepper />,
@@ -73,12 +78,12 @@ function App() {
 
   return (
     <div className="bg-black w-fit md:w-full max-w-7xl mx-auto h-full ">
-      <div className="pt-14 overflow-x-scroll scrollbar-none ">
-        <div className="flex gap-4 items-center border-b-amber-300 border-b-2  pb-2">
+      <div className="pt-14   ">
+        <div className="flex gap-3 flex-wrap overflow-x-scroll justify-evenly scrollbar-thumb-amber-300  scrollbar-track-none items-center pb-2">
           {Component.map((d, index) => (
             <>
               <div
-                className={`text-white font-bold rounded-xl p-3  ${componentActiveIndex == index ? "bg-amber-400" : "bg-red-300"} transition-colors duration-300 ease-in-out`}
+                className={`text-white font-bold rounded-xl p-3 text-nowrap  ${componentActiveIndex == index ? "bg-amber-400" : "bg-red-300"} transition-colors duration-300 ease-in-out`}
                 key={d.name}
                 onClick={() => componetChanger(index)}
               >
@@ -88,7 +93,7 @@ function App() {
           ))}
         </div>
       </div>
-      <div className=" p-10 lg:p-40 pt-10 w-full ">
+      <div className=" p-10 lg:p-30 pt-10 w-full ">
         {Component[componentActiveIndex].component}
       </div>
 
