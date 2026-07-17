@@ -4,14 +4,12 @@ const Observer = ({ Imagesdata, setPageno ,loading}) => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (param) => {
-        if (param[0].isIntersecting) {
-            console.log(param);
-            
+        if (param[0].isIntersecting) {            
           observer.unobserve(lastImage);
           setPageno((prev) => prev + 1);
         }
       },
-      { threshold: 0.5 },
+      { threshold: 1 },
     );
 
     const lastImage = document.querySelector(".images-url:last-child");

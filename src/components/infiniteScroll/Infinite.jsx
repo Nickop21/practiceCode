@@ -6,7 +6,7 @@ const Infinite = () => {
   const [data, setData] = useState([]);
   const [pageno, setPageno] = useState(1);
   const [loading, setLoading] = useState(false);
-  
+
   async function fetchData() {
     setLoading(true);
 
@@ -26,7 +26,6 @@ const Infinite = () => {
   }
   useEffect(() => {
     fetchData();
-    console.log(data);
   }, [pageno]);
 
   return (
