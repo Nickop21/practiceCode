@@ -11,21 +11,26 @@ import ChipInput from "./components/chipInput/ChipInput";
 import FileExplorer from "./fileExplorer/FileExplorer";
 import Stepper from "./components/stepper/Stepper";
 import Rating from "./ratings/Rating";
+import ImageCarousel from "./components/carousel/ImageCarousel";
 
 function App() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [componentActiveIndex, setComponentActiveIndex] = useState(0);
 
   const Component = [
-      {
+    {
+      name: "Carousel",
+      component: <ImageCarousel />,
+    },
+    {
       name: "Ratings",
       component: <Rating />,
     },
-      {
+    {
       name: "Stepper",
       component: <Stepper />,
     },
-     {
+    {
       name: "File Explorer",
       component: <FileExplorer />,
     },

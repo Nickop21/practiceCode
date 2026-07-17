@@ -1,0 +1,36 @@
+.image-container{
+display: flex;
+overflow-x: hidden;
+position: relative;
+}
+.crousal-img{
+width: 100%;
+object-fit: contain;
+border-radius: 20px;
+height: 400px;
+}
+
+.arrow{
+    position: absolute;
+    background: rgb(199, 80, 80);
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    top: 50%;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    font-weight: 700;
+}
+.left-arrow{
+    left: 0;
+    margin-left: 5px;
+
+}
+.right-arrow{
+right: 0;
+margin-right: 5px;
+}
+.arrow:hover{
+    background: rgb(111, 18, 34);
+}
