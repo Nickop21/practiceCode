@@ -1,0 +1,16 @@
+.image-card {
+  display: flex;
+  flex-direction: column;
+}
+.image-card img {
+  height: 300px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+.loader {
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}

@@ -12,12 +12,17 @@ import FileExplorer from "./fileExplorer/FileExplorer";
 import Stepper from "./components/stepper/Stepper";
 import Rating from "./ratings/Rating";
 import ImageCarousel from "./components/carousel/ImageCarousel";
+import Infinite from "./components/infiniteScroll/Infinite";
 
 function App() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [componentActiveIndex, setComponentActiveIndex] = useState(0);
 
   const Component = [
+     {
+      name: "Infinite Scroll",
+      component: <Infinite />,
+    },
     {
       name: "Carousel",
       component: <ImageCarousel />,
