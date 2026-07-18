@@ -69,15 +69,15 @@ const CommentCard = ({ commentData, setComments }) => {
   return (
     <>
       {commentData.map((data) => (
-        <div key={data.id} className="border-b-2 py-3">
+        <div key={data.id} className="border-b-2 border-gray-800 py-3">
           <div className="flex items-start">
-            <div className="bg-white rounded-full p-2 mr-2">👤</div>
+            <div className="bg-white rounded-full p-2 mr-2 ml-2">👤</div>
 
             <span>{data.commentText}</span>
 
             {data.children?.length > 0 && (
               <button
-                className={`ml-4 bg-blue-700 text-white px-2 py-1 rounded transition-transform duration-300 ${
+                className={`ml-2 text-white px-2 py-1 rounded transition-transform duration-300 ${
                   isCommentOpen[data.id] ? "rotate-90" : ""
                 }`}
                 onClick={() => toggleCommentsHandler(data.id)}
@@ -92,7 +92,7 @@ const CommentCard = ({ commentData, setComments }) => {
               <input
                 placeholder="Add Reply..."
                 value={newComment[data.id] || ""}
-                className="border-b outline-none p-1"
+                className=" outline-none p-2 rounded-xl bg-gray-800"
                 onChange={(e) =>
                   setNewComment((prev) => ({
                     ...prev,
@@ -102,7 +102,7 @@ const CommentCard = ({ commentData, setComments }) => {
               />
 
               <button
-                className="ml-4 bg-blue-700 text-white px-3 py-1 rounded"
+                className="ml-4 bg-blue-950 text-white px-3 py-1 rounded"
                 onClick={() => addnewCommentHandler(data.id)}
               >
                 Comment
@@ -110,7 +110,7 @@ const CommentCard = ({ commentData, setComments }) => {
             </div>
           ) : (
             <button
-              className="ml-10 mt-3 bg-blue-700 text-white px-3 py-1 rounded"
+              className="ml-14 mt-3 bg-blue-950 text-white px-3 py-1 rounded"
               onClick={() => openReplyInput(data.id)}
             >
               💬 Reply
@@ -118,7 +118,7 @@ const CommentCard = ({ commentData, setComments }) => {
           )}
 
           {isCommentOpen[data.id] && data.children?.length > 0 && (
-            <div className="ml-10 mt-3 border-l-2 pl-4">
+            <div className="ml-10 mt-3 border-l-2 pl-0 border-gray-800">
               <CommentCard
                 commentData={data.children}
                 setComments={setComments}
