@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./todo.css";
 import TaskDisplay from "./TaskDisplay";
 
@@ -15,8 +15,11 @@ const Todo = () => {
     setTask(val);
   }
   function addTodoData() {
-    if (!task) {      
-      setError((prev)=>({...prev,inputerr:"Add Smothing Before you click add"}))
+    if (!task) {
+      setError((prev) => ({
+        ...prev,
+        inputerr: "Add Smothing Before you click add",
+      }));
     } else {
       setTodo((prev) => [...prev, { task: task, checked: false }]);
       setTask("");
@@ -34,6 +37,12 @@ const Todo = () => {
 
     setTodo(deleteTaskData);
   }
+  function editTodo(index, editVal) {
+    const newTodo = toDo.map((data, ind) =>
+      ind == index ? { task: editVal , isChecked:false } : data,
+    );
+    setTodo(newTodo);
+  }
 
   return (
     <div className="todo-container">
@@ -44,7 +53,7 @@ const Todo = () => {
             type="text"
             className="add-todo-input color"
             value={task}
-            placeholder={error.inputerr ?error.inputerr :"Add New Task"}
+            placeholder={error.inputerr ? error.inputerr : "Add New Task"}
             onChange={(e) => inputChangeHandler(e)}
           />
           <button className="add-btn" onClick={() => addTodoData()}>
@@ -53,20 +62,18 @@ const Todo = () => {
         </form>
         <div className="mt-6">
           {!toDo.length ? (
-            <div className="text-amber-50 text-center">
-               Add New Task
-            </div>
+            <div className="text-amber-50 text-center">Add New Task</div>
           ) : (
             <>
               {toDo?.map((data, index) => (
                 <div key={index}>
-
-                    <TaskDisplay
-                      todo={data}
-                      index={index}
-                      checked={isChecked}
-                      deleteTodo={deleteTodo}
-                    />
+                  <TaskDisplay
+                    todo={data}
+                    index={index}
+                    checked={isChecked}
+                    deleteTodo={deleteTodo}
+                    editTodo={editTodo}
+                  />
                 </div>
               ))}
             </>
