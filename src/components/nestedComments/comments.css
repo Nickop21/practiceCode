@@ -1,17 +1,16 @@
-.nested-container{
-    background: rgb(13, 17, 25);
-    /* height: 400px; */
-    padding: 20px;
-    border-radius: 20px;
-    color:whitesmoke
+.nested-container {
+  background: rgb(13, 17, 25);
+  /* height: 400px; */
+  padding: 20px;
+  border-radius: 20px;
+  color: whitesmoke;
 }
 
-.comment-card{
-    color: whitesmoke;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    padding-left: 20px;
-
+.comment-card {
+  color: whitesmoke;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding-left: 10px;
 }

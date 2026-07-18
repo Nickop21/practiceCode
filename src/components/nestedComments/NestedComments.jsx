@@ -28,12 +28,14 @@ const NestedComments = () => {
           commentText:
             "The only difference is that instead of children, you'll recurse over replies.",
           isChildren: true,
-          children:[{
-             id: 42,
-          commentText:
-            "The only difference is that instead of children, you'll recurse over replies.",
-          isChildren: false,}
-          ]
+          children: [
+            {
+              id: 42,
+              commentText:
+                "The only difference is that instead of children, you'll recurse over replies.",
+              isChildren: false,
+            },
+          ],
         },
       ],
     },
@@ -45,10 +47,11 @@ const NestedComments = () => {
     },
   ]);
 
+
   return (
     <div className="nested-container">
       <div className="text-2xl font-bold">Comments</div>
-      <CommentCard commentData={comments} />
+      <CommentCard commentData={comments} setComments={setComments} />
     </div>
   );
 };
