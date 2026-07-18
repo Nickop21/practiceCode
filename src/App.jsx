@@ -13,12 +13,17 @@ import Stepper from "./components/stepper/Stepper";
 import Rating from "./ratings/Rating";
 import ImageCarousel from "./components/carousel/ImageCarousel";
 import Infinite from "./components/infiniteScroll/Infinite";
+import NestedComments from "./components/nestedComments/NestedComments";
 
 function App() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [componentActiveIndex, setComponentActiveIndex] = useState(0);
 
   const Component = [
+     {
+      name: "Nested Comments",
+      component: <NestedComments />,
+    },
      {
       name: "Infinite Scroll",
       component: <Infinite />,
