@@ -6,10 +6,16 @@
 .container{
     position: absolute;
  border: 1px solid wheat;
-    width: 40%;
+    width: 100%;
     /* height: ; */
     padding: 20px;
   
+}
+@media(min-width:768px){
+.container{
+    width: 50%;
+}
+
 }
 
 .parent-list{

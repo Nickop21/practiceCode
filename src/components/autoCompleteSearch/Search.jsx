@@ -20,18 +20,18 @@ const Search = () => {
   return (
 
     
-    <div className="">
+    <div className="bg-gray-950 text-white">
       <input
         type="text"
-        className=" input-search "
+        className=" input-search bg-gray-900 "
         placeholder="Search the web"
         value={searchText}
         onChange={(e) => onChangeData(e)}
       />
       {
-          resultData?.recipes.length==0 || !resultData ? <div className="bg-white p-4 rounded-b-2xl">No Data</div> :
+          resultData?.recipes.length==0 || !resultData ? <div className="p-4 rounded-b-2xl">No Data</div> :
           
-          <div className="search-result">
+          <div className="search-result bg-gray-900">
         {resultData?.recipes?.map((data) => (
           <div className="result-child" key={data.id}>
             <p>{data?.name}</p>

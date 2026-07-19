@@ -68,7 +68,7 @@ const CommentCard = ({ commentData, setComments }) => {
 
   return (
     <>
-      {commentData.map((data) => (
+      {commentData?.map((data) => (
         <div key={data.id} className="border-b-2 border-gray-800 py-3">
           <div className="flex items-start">
             <div className="bg-white rounded-full p-2 mr-2 ml-2">👤</div>

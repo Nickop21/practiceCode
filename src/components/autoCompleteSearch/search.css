@@ -3,7 +3,7 @@
 }
 .input-search {
   width: 100%;
-  background-color: white;
+  /* background-color: white; */
   padding: 15px;
   border-radius: 20px;
   border-bottom-left-radius: 0;
@@ -17,7 +17,6 @@
   border-radius: 20px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  background-color: white;
   overflow-y: scroll;
   overflow-x:hidden ;
   scrollbar-color: rgb(243, 159, 159) #f9fafb01; 
@@ -39,10 +38,11 @@
   position: relative;
   /* padding: 15px; */
   width: 100%;
+  padding-bottom: 5px;
 }
 
 .result-child:hover {
-  background-color: bisque;
+  background-color: rgb(7, 13, 27);
 }
 .search-result p {
   padding: 15px;
