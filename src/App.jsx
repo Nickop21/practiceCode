@@ -15,12 +15,17 @@ import ImageCarousel from "./components/carousel/ImageCarousel";
 import Infinite from "./components/infiniteScroll/Infinite";
 import NestedComments from "./components/nestedComments/NestedComments";
 import NestedCheckbox from "./components/nestedCheckboxes/NestedCheckbox";
+import Typing from "./components/typingEffect/Typing";
 
 function App() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [componentActiveIndex, setComponentActiveIndex] = useState(0);
 
   const Component = [
+      {
+      name: "Typing Effect",
+      component: <Typing />,
+    },
       {
       name: "Nested CheckBoxes",
       component: <NestedCheckbox />,
