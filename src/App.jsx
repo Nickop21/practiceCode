@@ -16,6 +16,7 @@ import Infinite from "./components/infiniteScroll/Infinite";
 import NestedComments from "./components/nestedComments/NestedComments";
 import NestedCheckbox from "./components/nestedCheckboxes/NestedCheckbox";
 import Typing from "./components/typingEffect/Typing";
+import Drag from "./components/dragDrop/Drag";
 
 function App() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -23,6 +24,10 @@ function App() {
 
   const Component = [
       {
+      name: "Drag And Drop",
+      component: <Drag />,
+    },
+     {
       name: "Typing Effect",
       component: <Typing />,
     },
