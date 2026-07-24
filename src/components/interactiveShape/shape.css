@@ -1,0 +1,19 @@
+.shape-parent{
+    width: 16rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 5px;
+   
+
+}
+
+.shape{
+    width: 5rem;
+    height: 4rem;
+    border: 1px solid white;
+    cursor: pointer;
+    
+}
+.active{
+    background-color: rgb(2, 29, 54);
+}
