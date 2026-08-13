@@ -19,6 +19,8 @@ import Typing from "./components/typingEffect/Typing";
 import Drag from "./components/dragDrop/Drag";
 import ToolTip from "./components/toolTip/ToolTip";
 import Interactiveshape from "./components/interactiveShape/Interactiveshape";
+import Breadcrum from "./components/breadcrum/Breadcrum";
+import Product from "./components/breadcrum/Product";
 
 function App() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -26,7 +28,12 @@ function App() {
   const [toolTipText, setToolTipText] = useState("");
   const [toolTipActiveIndex, setToolTipActiveIndex] = useState(null);
 
+
   const Component = [
+    {
+      name: "Bread crum",
+      component: <Breadcrum />,
+    },
     {
       name: "Interactive Shape",
       component: <Interactiveshape />,
@@ -122,6 +129,7 @@ function App() {
   }
 
   return (
+
     <div className="bg-black  w-full max-w-7xl mx-auto h-full ">
       <div className=" flex gap-3 p-6 overflow-x-scroll scrollbar-thumb-amber-300  scrollbar-track-none  ">
         {Component.map((d, index) => (
