@@ -21,6 +21,7 @@ import ToolTip from "./components/toolTip/ToolTip";
 import Interactiveshape from "./components/interactiveShape/Interactiveshape";
 import Breadcrum from "./components/breadcrum/Breadcrum";
 import Product from "./components/breadcrum/Product";
+import QuizApp from "./components/quizApp/QuizApp";
 
 function App() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -30,6 +31,10 @@ function App() {
 
 
   const Component = [
+    {
+      name: "Quiz",
+      component: <QuizApp />,
+    },
     {
       name: "Bread crum",
       component: <Breadcrum />,
