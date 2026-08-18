@@ -95,25 +95,50 @@ const questions = [
   },
 ];
 
-
 const QuizApp = () => {
-const[currIndex,setCurrIndex]=useState(0)
+  const [currIndex, setCurrIndex] = useState(0);
   const [score, setScore] = useState(0);
+  const [quizCompleted, setQuizCompleted] = useState(false);
 
-
-function nextQuestionhandler() {
-  if (currIndex<questions.length-1) {
-    
-    setCurrIndex(currIndex+1)
+  function nextQuestionhandler() {
+    if (currIndex < questions.length - 1) {
+      setCurrIndex(currIndex + 1);
+    } else {
+      setQuizCompleted(true);
+    }
   }
-}
- 
+  const playAgainHandler = () => {
+    setCurrIndex(0);
+    setScore(0);
+    setQuizCompleted(false);
+  };
+
   return (
     <div className="w-full  flex justify-center flex-col items-center ">
       <Progress progress={60} currIndex={currIndex} score={score} />
-      
-     <QuizCard key={currIndex} question={questions[currIndex]} nextQuestionhandler={nextQuestionhandler} score={score} setScore={setScore}/>
-        <button className="rounded-4xl text-white bg-amber-700 p-4 w-2/4 mt-6 cursor-pointer hover:bg-amber-500" onClick={()=>nextQuestionhandler()}>next</button>
+
+      <QuizCard
+        key={currIndex}
+        question={questions[currIndex]}
+        nextQuestionhandler={nextQuestionhandler}
+        score={score}
+        setScore={setScore}
+      />
+      {!quizCompleted ? (
+        <button
+          className="rounded-4xl text-white bg-amber-700 p-4 w-2/4 mt-6 cursor-pointer hover:bg-amber-500"
+          onClick={() => nextQuestionhandler()}
+        >
+          next
+        </button>
+      ) : (
+        <button
+          className="rounded-4xl text-white bg-green-600 p-4 w-2/4 mt-6 cursor-pointer hover:bg-green-500"
+          onClick={playAgainHandler}
+        >
+          Try Again
+        </button>
+      )}
     </div>
   );
 };
