@@ -18,3 +18,5 @@ const Steps = ({ stepperData, currIndex }) => {
 };
 
 export default Steps;
+
+// currIndex>=index so the previous stepper is also green otherwise it greenn the currindex only

@@ -27,12 +27,12 @@ const Accordian = () => {
   ];
 
   function accordianopen(index) {
-    if (activeAccodianIndex !== index) {
-      setActiveAccodianIndex(index);
-    }else{
+    setActiveAccodianIndex(index);
+    // if (activeAccodianIndex !== index) {
+    // }else{
 
-        setActiveAccodianIndex(-1);
-    }
+    //     setActiveAccodianIndex(-1);
+    // }
   }
   return (
     <div className="accodian-parent">

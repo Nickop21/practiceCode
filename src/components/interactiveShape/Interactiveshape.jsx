@@ -10,8 +10,8 @@ const Interactiveshape = () => {
 
 
   function handlerIntrectiveShape(rowIndx, colIndx, flag) {
-    if(timerRef.current.length>0 && flag) return
-    if (grid[rowIndx][colIndx] && flag) return;
+    if(timerRef.current.length>0 && flag) return //if timer hai or flag true  hai to waps click nahi krne dena hai
+    if (grid[rowIndx][colIndx] && flag) return;  // double entry not allow if ye waps se colour chla gya but hmne ise true kr dia tha already
     setGrid((prev) => {
       const deepCopy = prev.map((row) => [...row]);
       deepCopy[rowIndx][colIndx] = flag;

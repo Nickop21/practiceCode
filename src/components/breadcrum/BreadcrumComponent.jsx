@@ -3,7 +3,7 @@ import { Link, useLocation, useParams } from "react-router-dom";
 
 const BreadcrumComponent = () => {
   const { pathname } = useLocation();
-  const path = pathname.split("/").filter((x) => x);
+  const path = pathname.split("/").filter((x) => x); // remove ""  ["","product","id"]
   console.log(pathname);
   let loc = "";
 

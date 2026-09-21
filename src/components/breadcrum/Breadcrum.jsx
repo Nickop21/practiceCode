@@ -20,7 +20,7 @@ const Breadcrum = () => {
     <BreadcrumComponent/>
     <div className="flex flex-wrap w-full">
       {data?.products.slice(0,10)?.map((data) => (
-        <Link to={`/product/${data.id}`} className="" className="bg-white w-[27%] rounded p-10 m-2 mb-8 " key={data.id} >
+        <Link to={`/product/${data.id}`} className="bg-white w-[27%] rounded p-10 m-2 mb-8 " key={data.id} >
         
         {/* <div > */}
           <img src={data.images[0]} alt="" />

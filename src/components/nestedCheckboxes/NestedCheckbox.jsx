@@ -3,67 +3,77 @@ import "./nested.css";
 import Checkboxes from "./Checkboxes";
 
 const NestedCheckbox = () => {
-  const [checkBoxesData, setCheckBoxesData] = useState([
-    {
-      id: 1,
-      name: "fruits",
-      children: [
-        {
-          id: 2,
-          name: "mango",
-          children: [
-            {
-              id: 3,
-              name: "dashheri",
-              children: [
-                {
-                  id: 4,
-                  name: "lagda",
-                  children: [],
-                },
-                {
-                  id: 487,
-                  name: "lagda",
-                  children: [],
-                },
-              ],
-            },
-          ],
-        },
-      ],
-    },
-    {
-      id: 5,
-      name: "sports",
-      children: [
-        {
-          id: 6,
-          name: "cricket",
-          children: [
-            {
-              id: 44,
-              name: "indoor",
-              children: [{
-                  id: 4643,
-                  name: "lagda",
-                  children: [],
-                },],
-            },
-            {
-              id: 55,
-              name: "outdore",
-              children: [],
-            },
-          ],
-        },
-      ],
-    },
-    {
-      id: 7,
-      name: "fruits",
-      children: [{ id: 22, name: "mango", children: [] }],
-    },
-  ]);
+ const [checkBoxesData, setCheckBoxesData] = useState([
+  {
+    id: 1,
+    name: "fruits",
+    children: [
+      {
+        id: 2,
+        name: "mango",
+        children: [
+          {
+            id: 3,
+            name: "dashheri",
+            children: [
+              {
+                id: 4,
+                name: "lagda",
+                children: [],
+              },
+              {
+                id: 487,
+                name: "totapuri",
+                children: [],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+
+  {
+    id: 5,
+    name: "sports",
+    children: [
+      {
+        id: 6,
+        name: "cricket",
+        children: [
+          {
+            id: 44,
+            name: "indoor",
+            children: [
+              {
+                id: 4643,
+                name: "badminton",
+                children: [],
+              },
+            ],
+          },
+          {
+            id: 55,
+            name: "outdoor",
+            children: [],
+          },
+        ],
+      },
+    ],
+  },
+
+  {
+    id: 7,
+    name: "vegetables",
+    children: [
+      {
+        id: 22,
+        name: "potato",
+        children: [],
+      },
+    ],
+  },
+]);
   const [boxChecked, setBoxChecked] = useState({});
 
   return (

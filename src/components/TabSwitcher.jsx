@@ -137,11 +137,14 @@ const TabSwitcher = ({ activeIndex, activeIndexChange }) => {
         ))}
       </div>
       <div className="bg-orange-300  flex flex-col ">
-        {tabs.map((data, index) => (
+        {/* {tabs.map((data, index) => (
           <div className={`${index === activeIndex ? "visible" : "hidden"} `}>
             {data.component}
           </div>
-        ))}
+        ))} */}
+        <div>
+          {tabs[activeIndex]?.component}
+        </div>
       </div>
     </div>
   );

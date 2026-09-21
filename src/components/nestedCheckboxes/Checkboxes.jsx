@@ -6,7 +6,7 @@ const Checkboxes = ({ checkBoxesData, boxChecked, setBoxChecked,rootData }) => {
       const updatedchecks = { ...prev };
       const checkState = !prev[parentnode.id];
 
-      const updateChild = (data) => {
+      const updateChild = (data) => {    // func if parent true then all childern is true
         updatedchecks[data.id] = checkState;
 
         data.children.forEach((childnode) => {
@@ -16,11 +16,11 @@ const Checkboxes = ({ checkBoxesData, boxChecked, setBoxChecked,rootData }) => {
 
       updateChild(parentnode);
 
-      const updateParent = (node) => {
+      const updateParent = (node) => {  // if all child true then parent true
         node.forEach((data) => {
           if (data.children.length > 0) {
-            updateParent(data.children);
-            updatedchecks[data.id] = data.children.every(
+            updateParent(data.children);  //recursive to check that all child is true
+            updatedchecks[data.id] = data.children.every(  // this is checking all child is check then return true
               (child) => updatedchecks[child.id],
             );
           }
