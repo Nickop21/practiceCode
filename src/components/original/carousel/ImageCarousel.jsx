@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./carousel.css";
-import imagesData from "../../../utils/images.json";
+import imagesData from "../../../../utils/images.json";
 
 const ImageCarousel = () => {
   const [currImage, setCurrImage] = useState(0);

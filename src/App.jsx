@@ -1,27 +1,28 @@
 import { useState } from "react";
 import "./App.css";
-import TabSwitcher from "./components/TabSwitcher";
-import Pagination from "./components/pagination/Pagination";
-import Search from "./components/autoCompleteSearch/Search";
-import Accordian from "./components/accordian/Accordian";
-import ProgressBar from "./components/progressbar/ProgressBar";
-import OtpInput from "./components/otpInput/OtpInput";
-import Todo from "./components/todo/Todo";
-import ChipInput from "./components/chipInput/ChipInput";
-import FileExplorer from "./fileExplorer/FileExplorer";
-import Stepper from "./components/stepper/Stepper";
-import Rating from "./ratings/Rating";
-import ImageCarousel from "./components/carousel/ImageCarousel";
-import Infinite from "./components/infiniteScroll/Infinite";
-import NestedComments from "./components/nestedComments/NestedComments";
-import NestedCheckbox from "./components/nestedCheckboxes/NestedCheckbox";
-import Typing from "./components/typingEffect/Typing";
-import Drag from "./components/dragDrop/Drag";
-import ToolTip from "./components/toolTip/ToolTip";
-import Interactiveshape from "./components/interactiveShape/Interactiveshape";
-import Breadcrum from "./components/breadcrum/Breadcrum";
-import Product from "./components/breadcrum/Product";
-import QuizApp from "./components/quizApp/QuizApp";
+import TabSwitcher from "./components/original/tabSwitcher/TabSwitcher";
+import Pagination from "./components/original/pagination/Pagination";
+import Search from "./components/original/autoCompleteSearch/Search";
+import Accordian from "./components/original/accordian/Accordian";
+import ProgressBar from "./components/original/progressbar/ProgressBar";
+import OtpInput from "./components/original/otpInput/OtpInput";
+import Todo from "./components/original/todo/Todo";
+import ChipInput from "./components/original/chipInput/ChipInput";
+import FileExplorer from "./components/original/fileExplorer/FileExplorer";
+import Stepper from "./components/original/stepper/Stepper";
+import Rating from "./components/original/ratings/Rating";
+import ImageCarousel from "./components/original/carousel/ImageCarousel";
+import Infinite from "./components/original/infiniteScroll/Infinite";
+import NestedComments from "./components/original/nestedComments/NestedComments";
+import NestedCheckbox from "./components/original/nestedCheckboxes/NestedCheckbox";
+import Typing from "./components/original/typingEffect/Typing";
+import Drag from "./components/original/dragDrop/Drag";
+import ToolTip from "./components/original/toolTip/ToolTip";
+import Interactiveshape from "./components/original/interactiveShape/Interactiveshape";
+import Breadcrum from "./components/original/breadcrum/Breadcrum";
+import Product from "./components/original/breadcrum/Product";
+import QuizApp from "./components/original/quizApp/QuizApp";
+import BookingLayout from "./components/original/hallbooking/BookingLayout";
 
 function App() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -31,6 +32,10 @@ function App() {
 
 
   const Component = [
+      {
+      name: "Booking",
+      component: <BookingLayout />,
+    },
     {
       name: "Quiz",
       component: <QuizApp />,

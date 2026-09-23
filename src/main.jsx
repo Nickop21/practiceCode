@@ -3,8 +3,8 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Product from './components/breadcrum/Product.jsx'
-import Breadcrum from './components/breadcrum/Breadcrum.jsx'
+import Product from './components/original/breadcrum/Product.jsx'
+import Breadcrum from './components/original/breadcrum/Breadcrum.jsx'
 const routes=createBrowserRouter([
   {
     path:"/",

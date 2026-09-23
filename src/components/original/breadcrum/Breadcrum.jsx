@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import useFetch from "../../../hooks/useFetch";
+import useFetch from "../../../../hooks/useFetch";
 import Loader from "../Loader";
 import { Link } from "react-router-dom";
 import BreadcrumComponent from "./BreadcrumComponent";
